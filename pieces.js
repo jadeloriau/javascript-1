@@ -1,4 +1,4 @@
-const response = await fetch("pieces-auto.json");
+const response = await fetch('pieces-auto.json');
 const pieces = await response.json();
 
 const article= pieces[0];
@@ -9,11 +9,11 @@ nomElem.innerText= article.nom;
 const catElem = document.createElement("p");
 catElem.innerText= article.categorie??"(aucune catégorie)";
 const prixElem = document.createElement("p");
-prixElem.innerText='Prix : ${article.prix} (${article.prix}<35?€:€€€)';
+prixElem.innerText='Prix : ${article.prix} (${article.prix}<35?"€":"€€€")';
 const descElem = document.createElement("p");
 descElem.innerText = article.description??"pas de description pour le moment";
 const dispElem = document.createElement("p");
-dispElem.innerText = article.disponibilite?'Rupture de stock':'En stock';
+dispElem.innerText = article.disponibilite?"Rupture de stock":"En stock";
 
 
 const sectionfiches = document.querySelector(".fiches");
