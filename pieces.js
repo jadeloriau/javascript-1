@@ -28,9 +28,23 @@ pieceElement.appendChild(prixElem)
 pieceElement.appendChild(catElem);
 pieceElement.appendChild(descElem);
 pieceElement.appendChild(dispElem);
-
-
 }
+
+const btnTrier = document.querySelector(".btn-trier");
+btnTrier.addEventListener("click", function(){
+    const piecesOrdonnes = Array.from("pieces");
+    piecesOrdonnes.sort(function(a,b){
+        return a.prix-b.prix;
+    })
+});
+
+const btnFiltrer = document.querySelector(".btn-filtrer");
+btnFiltrer.addEventListener("click", function(){
+    const piecesFiltrees = pieces.filter(function (piece){
+        return piece.prix <= 35;
+    })
+    
+})
 
 
 
