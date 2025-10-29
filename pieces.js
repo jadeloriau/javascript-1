@@ -20,7 +20,7 @@ dispElem.innerText = pieces[i].disponibilite?"Rupture de stock":"En stock";
 //Rattachement de nos balises au DOM
 const sectionFiches = document.querySelector(".fiches");
 const pieceElement = document.createElement("article");
-sectionFiches.appendChild(pieceElement)
+sectionFiches.appendChild(pieceElement);
 
 pieceElement.appendChild(imgElem);
 pieceElement.appendChild(nomElem)
