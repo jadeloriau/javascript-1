@@ -38,10 +38,26 @@ btnTrier.addEventListener("click", function(){
     })
 });
 
+const btnDecr = document.querySelector(".btn-decr");
+btnDecr.addEventListener("click", function(){
+    const piecesOrdonnesDecr = Array.from("pieces");
+    piecesOrdonnesDecr.sort(function(a,b){
+        return b.prix-a.prix;
+    })
+});
+
 const btnFiltrer = document.querySelector(".btn-filtrer");
 btnFiltrer.addEventListener("click", function(){
     const piecesFiltrees = pieces.filter(function (piece){
         return piece.prix <= 35;
+    })
+    
+})
+
+const btnDesc = document.querySelector(".btn-desc");
+btnDesc.addEventListener("click", function(){
+    const piecesFiltreesDescr = pieces.filter(function (piece){
+        return piece.description;
     })
     
 })
